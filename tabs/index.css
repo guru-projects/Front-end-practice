@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navContainer {
+    margin: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.navContainer button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.tabs {
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+}
+.navContainer .active {
+    background-color: #4CAF50;
+}
+.contentSection {
+    margin: 1rem;
+    text-align: justify;
+}
+.contentSection .tabContent {
+    display: none;
+}
+.contentSection .tabContent.active {
+    display: block;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main>
+        <nav class="navContainer">
+            <button class="tabs active">Home</button>
+            <button class="tabs">About</button>
+            <button class="tabs">Contact</button>
+            <button class="tabs">Services</button>
+        </nav>
+        <section class="contentSection">
+            <article class="tabContent active">
+                <h1>Home</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore neque laboriosam numquam officiis modi magni delectus minus cum iste voluptates quia quis assumenda, iusto qui distinctio consectetur exercitationem voluptatibus explicabo, ipsa laudantium vitae sit deleniti earum aliquid? Dicta fugit, ad pariatur officiis reprehenderit quia. Placeat unde nulla impedit at quibusdam nam praesentium eius explicabo accusantium exercitationem, illum minus voluptate amet corporis, ratione omnis facere nostrum velit labore! Placeat saepe iusto, aut aliquid culpa recusandae delectus, eveniet deleniti dolore aliquam, fuga vero. Assumenda nulla dignissimos maxime numquam quod nemo ex ea facere? Consequuntur quae aliquid iure dolore debitis excepturi vero perspiciatis.</p>
+            </article>
+            <article class="tabContent">
+                <h1>About</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore neque laboriosam numquam officiis modi magni delectus minus cum iste voluptates quia quis assumenda, iusto qui distinctio consectetur exercitationem voluptatibus explicabo, ipsa laudantium vitae sit deleniti earum aliquid? Dicta fugit, ad pariatur officiis reprehenderit quia. Placeat unde nulla impedit at quibusdam nam praesentium eius explicabo accusantium exercitationem, illum minus voluptate amet corporis, ratione omnis facere nostrum velit labore! Placeat saepe iusto, aut aliquid culpa recusandae delectus, eveniet deleniti dolore aliquam, fuga vero. Assumenda nulla dignissimos maxime numquam quod nemo ex ea facere? Consequuntur quae aliquid iure dolore debitis excepturi vero perspiciatis.</p>
+            </article>
+            <article class="tabContent">
+                <h1>Contact</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore neque laboriosam numquam officiis modi magni delectus minus cum iste voluptates quia quis assumenda, iusto qui distinctio consectetur exercitationem voluptatibus explicabo, ipsa laudantium vitae sit deleniti earum aliquid? Dicta fugit, ad pariatur officiis reprehenderit quia. Placeat unde nulla impedit at quibusdam nam praesentium eius explicabo accusantium exercitationem, illum minus voluptate amet corporis, ratione omnis facere nostrum velit labore! Placeat saepe iusto, aut aliquid culpa recusandae delectus, eveniet deleniti dolore aliquam, fuga vero. Assumenda nulla dignissimos maxime numquam quod nemo ex ea facere? Consequuntur quae aliquid iure dolore debitis excepturi vero perspiciatis.</p>
+            </article>
+            <article class="tabContent">
+                <h1>Services</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore neque laboriosam numquam officiis modi magni delectus minus cum iste voluptates quia quis assumenda, iusto qui distinctio consectetur exercitationem voluptatibus explicabo, ipsa laudantium vitae sit deleniti earum aliquid? Dicta fugit, ad pariatur officiis reprehenderit quia. Placeat unde nulla impedit at quibusdam nam praesentium eius explicabo accusantium exercitationem, illum minus voluptate amet corporis, ratione omnis facere nostrum velit labore! Placeat saepe iusto, aut aliquid culpa recusandae delectus, eveniet deleniti dolore aliquam, fuga vero. Assumenda nulla dignissimos maxime numquam quod nemo ex ea facere? Consequuntur quae aliquid iure dolore debitis excepturi vero perspiciatis.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        const tabs = document.querySelectorAll('.tabs')
+        const tabContent = document.querySelectorAll('.tabContent')
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(tab => tab.classList.remove('active'));
+                tab.classList.add('active')
+
+                tabContent.forEach(content => content.classList.remove('active'))
+                tabContent[index].classList.add('active')
+            })
+        })
+
+        
+    </script>
+</body>
+</html>
