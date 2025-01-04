@@ -9,7 +9,7 @@ const App = () => (
     <main className="my-12 grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-y-8 md:gap-x-8">
       <div className="col-span-2 row-span-2">
         <picture>
-        <source media="(max-width:650px)" srcset={headerImgMobile}></source>
+        <source media="(max-width:650px)" srcSet={headerImgMobile}></source>
         <img src={headerImg} alt="headerImg" className=" w-full max-h-[350px]" />
         </picture>
 
