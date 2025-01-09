@@ -13,11 +13,9 @@ function App() {
     e.preventDefault();
     setTasks(prev => [...prev, newTask])
     console.log(tasks);
-    
   }
   
   const handleDelete = (task) => {
-    
     setTasks(prev => prev.filter(item => item!==task))
   }
   return (
