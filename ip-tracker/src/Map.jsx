@@ -1,19 +1,27 @@
-import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import React, { useEffect } from "react";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-const Map = ({ lat, lng }) => {
+// Component to update the map center dynamically
+const ChangeView = ({ lat, lng }) => {
+  const map = useMap();
+  useEffect(() => {
+    map.setView([lat, lng], 13); // Update map view with new coordinates
+  }, [lat, lng, map]);
+  return null;
+};
 
+const Map = ({ lat, lng }) => {
   return (
     <div style={{ width: "100%", height: "500px" }}>
-      {/* MapContainer must have a height; CSS handles the height */}
       <MapContainer
-        center={[lat, lng]} // Latitude and Longitude for London
-        zoom={13} // Initial zoom level
-        style={{ width: "100%", height: "100%" }} // Ensure the map fills its container
+        center={[lat, lng]}
+        zoom={13}
+        style={{ width: "100%", height: "100%" }}
       >
+        <ChangeView lat={lat} lng={lng} /> {/* Ensures the map updates */}
         <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" // Tile URL for OpenStreetMap
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
         <Marker position={[lat, lng]}>
